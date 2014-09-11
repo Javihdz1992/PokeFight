@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PokeApp</string>
+    <string name="txt_msg">Toca la imagen para continuar</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_list_">PokeApp</string>
+    <string name="txt_list">Elige el tuyo</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
