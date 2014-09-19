@@ -5,13 +5,14 @@ import java.util.List;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.dam.pokefight.adapters.PokeListAdapter;
 import com.dam.pokefight.dao.Pokemon;
 
 public class ListActivity extends Activity implements OnItemClickListener{
@@ -33,7 +34,9 @@ public class ListActivity extends Activity implements OnItemClickListener{
 		pokemones.add(new Pokemon(8, "Nidoran", "Veneno", R.drawable.nidoran, 100, 40, 57));
 		pokemones.add(new Pokemon(9, "Clefairy", "Hada", R.drawable.clefairy, 100, 48, 45));
 		pokemones.add(new Pokemon(10, "Sandshrew", "Tierra", R.drawable.sandshrew, 100, 85, 75));
-		ArrayAdapter<Pokemon> adapter = new ArrayAdapter<Pokemon>(getApplicationContext(),android.R.layout.simple_list_item_1,pokemones);
+		Typeface miPropiaTypeFace = Typeface.createFromAsset(getAssets(),
+				"fonts/pokemonsolid.ttf");
+		PokeListAdapter adapter = new PokeListAdapter(getApplicationContext(), R.layout.pokemon_list,pokemones,miPropiaTypeFace);
 		ListView listPok = (ListView)findViewById(R.id.listPok);
 		listPok.setAdapter(adapter);
 		listPok.setOnItemClickListener(this);

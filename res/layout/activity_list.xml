@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:background="@color/darkred"
     tools:context="com.dam.pokefight.ListActivity" >
-
+	
     <ListView
         android:id="@+id/listPok"
         android:layout_width="match_parent"

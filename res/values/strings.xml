@@ -7,5 +7,6 @@
     <string name="txt_msg">Toca la pantalla para continuar</string>
     <string name="title_activity_list">ListActivity</string>
     <string name="title_activity_fight">FightActivity</string>
-
+    <string name="txt_attack">Ataque</string>
+    <string name="txt_defense">Defensa</string>
 </resources>
