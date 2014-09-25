@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/darkred"
-    tools:context="com.dam.pokefight.MainActivity" >
+    tools:context="com.dam.pokefight.activities.MainActivity" >
 
     <ImageView
         android:id="@+id/logo"
