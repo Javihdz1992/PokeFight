@@ -15,17 +15,20 @@ import android.widget.ListView;
 import com.dam.pokefight.App;
 import com.dam.pokefight.R;
 import com.dam.pokefight.adapters.PokeListAdapter;
+import com.dam.pokefight.dao.DBAdapter;
 import com.dam.pokefight.dao.Pokemon;
 
 public class ListActivity extends Activity implements OnItemClickListener{
 	List<Pokemon> pokemones = new ArrayList<Pokemon>();
+	private DBAdapter dbAdapter;
 	public static final String TAG_USER = "USUARIO";
 	public static final String TAG_OPPONENT = "OPONENTE";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_list);
-		pokemones =((App)getApplicationContext()).getPokemones();
+		dbAdapter =((App)getApplicationContext()).getAdapter();
+		pokemones = dbAdapter.getPokemones();
 		Typeface miPropiaTypeFace = Typeface.createFromAsset(getAssets(),
 				"fonts/pokemonsolid.ttf");
 		PokeListAdapter adapter = new PokeListAdapter(getApplicationContext(), R.layout.pokemon_list,pokemones,miPropiaTypeFace);

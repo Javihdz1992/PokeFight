@@ -4,10 +4,12 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class DBHelper extends SQLiteOpenHelper {
 	// TABLA
 	public final static String POKEMON_TABLE = "pokemones";
+	//COLUMNAS
 	public final static String POKEMON_ID = "id";
 	public final static String POKEMON_NOMBRE = "nombre";
 	public final static String POKEMON_TIPO = "tipo";
@@ -25,7 +27,7 @@ public class DBHelper extends SQLiteOpenHelper {
 	public final static int P_ATAQUE = 6;
 
 	// SQL
-		private final String DATABASE_CREATE = 
+		private final static String DATABASE_CREATE = 
 				"CREATE TABLE "+POKEMON_TABLE 
 				+ "("+POKEMON_ID +" integer primary key autoincrement, "
 				+ POKEMON_NOMBRE + " text,"
@@ -35,9 +37,10 @@ public class DBHelper extends SQLiteOpenHelper {
 				+ POKEMON_DEFENSA + " integer,"
 				+ POKEMON_ATAQUE + " integer)";
 
-	public DBHelper(Context context, String name, CursorFactory factory,
+	public DBHelper(Context context, String bd, CursorFactory factory,
 			int version) {
-		super(context, name, factory, version);
+		super(context, bd, factory, version);
+		Log.e("SQL TABLA",DATABASE_CREATE);
 	}
 
 	@Override
