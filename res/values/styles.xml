@@ -3,12 +3,17 @@
     <!--
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
+
     -->
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
         -->
     </style>
 
@@ -16,7 +21,8 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-<style name="PokemonTextItem">
+
+    <style name="PokemonTextItem">
         <item name="android:paddingLeft">1dp</item>
         <item name="android:paddingBottom">1dp</item>
         <item name="android:textColor">@color/yellow</item>
@@ -35,4 +41,33 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="PokemonTextValueItem">
+        <item name="android:paddingLeft">1dp</item>
+        <item name="android:paddingBottom">1dp</item>
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PokemonVersusText">
+        <item name="android:paddingLeft">1dp</item>
+        <item name="android:paddingBottom">1dp</item>
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:shadowColor">@color/blue</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">15</item>
+    </style>
+
+    <style name="pokemonBarStyle" parent="@android:style/Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@android:drawable/progress_horizontal</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_horizontal</item>
+        <item name="android:minHeight">8dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+
 </resources>

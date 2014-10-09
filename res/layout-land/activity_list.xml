@@ -2,14 +2,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/darkred"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
     tools:context="com.dam.pokefight.activities.ListActivity" >
-	
+
     <ListView
         android:id="@+id/listPok"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="match_parent" >
     </ListView>
+    
+    <fragment
+        android:id="@+id/fragmentFight"
+        android:name="com.dam.pokefight.fragments.FightFragment"
+        android:layout_width="0dp"
+        android:layout_weight="6"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

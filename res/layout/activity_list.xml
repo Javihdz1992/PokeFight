@@ -13,11 +13,5 @@
         android:layout_weight="5" >
     </ListView>
 
-    <fragment
-        android:id="@+id/fragmentEjemplo"
-        android:name="com.dam.pokefight.fragments.FragmentEjemplo"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="5" />
 
 </LinearLayout>

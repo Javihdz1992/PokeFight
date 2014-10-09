@@ -4,9 +4,12 @@
     <string name="app_name">PokeFight</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="action_share">Compartir</string>
     <string name="txt_msg">Toca la pantalla para continuar</string>
     <string name="title_activity_list">ListActivity</string>
     <string name="title_activity_fight">FightActivity</string>
     <string name="txt_attack">Ataque</string>
     <string name="txt_defense">Defensa</string>
+    <string name="txt_versus">VS</string>
+    <string name="txt_button">Empezar Batalla</string>
 </resources>
