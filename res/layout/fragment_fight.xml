@@ -12,8 +12,8 @@
 
         <ImageView
             android:id="@+id/imgPokemonUser"
-            android:layout_width="70dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_weight="1"
             android:contentDescription="@string/app_name"
             android:gravity="center"
@@ -93,10 +93,11 @@
         android:gravity="center" >
 
         <TextView
+            android:id="@+id/txtVersus"
             style="@style/PokemonVersusText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_margin="24dp"
             android:gravity="center"
             android:text="@string/txt_versus" />
     </TableRow>
@@ -108,8 +109,8 @@
 
         <ImageView
             android:id="@+id/imgPokemonOponent"
-            android:layout_width="70dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_weight="1"
             android:contentDescription="@string/app_name"
             android:gravity="center"
@@ -140,7 +141,7 @@
                     style="@style/PokemonTextDescItem"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"
+                    android:layout_weight="3"
                     android:text="@string/txt_attack" />
 
                 <TextView
@@ -162,7 +163,7 @@
                     style="@style/PokemonTextDescItem"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"
+                    android:layout_weight="3"
                     android:text="@string/txt_defense" />
 
                 <TextView

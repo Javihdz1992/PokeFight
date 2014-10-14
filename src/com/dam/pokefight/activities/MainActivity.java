@@ -11,10 +11,12 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.dam.pokefight.App;
 import com.dam.pokefight.R;
 
 public class MainActivity extends Activity implements OnClickListener{
 	ImageView logo;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -26,6 +28,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		msg1.setTypeface(miPropiaTypeFace);
 		logo = (ImageView)findViewById(R.id.logo);
 		logo.setOnClickListener(this);
+		
 		startAnimation();
 	}
 
@@ -35,6 +38,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		animacionLogo.reset();
 		logo.clearAnimation();
 		logo.startAnimation(animacionLogo);
+		((App)getApplicationContext()).playIntro();
 	}
 
 	@Override

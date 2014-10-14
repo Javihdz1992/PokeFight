@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.dam.pokefight.activities.ListActivity"
             android:label="@string/title_activity_list" >
         </activity>    

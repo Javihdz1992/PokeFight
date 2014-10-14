@@ -8,14 +8,19 @@ import android.util.Log;
 
 import com.dam.pokefight.dao.DBAdapter;
 import com.dam.pokefight.dao.Pokemon;
+import com.dam.pokefight.media.SoundManager;
 
 public class App extends Application {
 	private DBAdapter dbAdapter;
 	private List<Pokemon> pokemones = new ArrayList<Pokemon>();
+	SoundManager manager;
+	int intro = 0;
 
 	@Override
 	public void onCreate() {
 		super.onCreate();
+		manager = new SoundManager(this);
+		intro= manager.load(R.raw.pokemonintro);
 		pokemones.add(new Pokemon(1, "Bulbasaur", "Planta",
 				R.drawable.bulbasaur, 100, 49, 49));
 		pokemones.add(new Pokemon(2, "Charmander", "Fuego",
@@ -40,10 +45,13 @@ public class App extends Application {
 		for (Pokemon p : pokemones) {
 			dbAdapter.insertPokemon(p);
 		}
-		Log.e("COUNT","TOTAL ="+dbAdapter.getCountPokemones());
+		Log.e("COUNT", "TOTAL =" + dbAdapter.getCountPokemones());
 	}
 
 	public DBAdapter getAdapter() {
 		return dbAdapter;
+	}
+	public void playIntro(){
+		manager.play(intro);
 	}
 }
